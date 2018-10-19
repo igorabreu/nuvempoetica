@@ -1,0 +1,28 @@
+.SarauForm {
+  padding: 0 5vw;
+}
+
+label {
+  font-size: 14px;
+  color: #7b7b7c;
+  margin-left: 10px;
+  display: block;
+}
+
+.SarauForm .success {
+  text-align: center;
+  font-size: 16px;
+  margin: auto;
+}
+
+.required {
+  color: #ff5151;
+}
+
+input {
+  margin-bottom: 20px;
+  display: block;
+  min-height: 25px;
+  border: 1px solid #d0d1d3;
+  width: 100%;
+}

@@ -1,0 +1,21 @@
+.MainLabel {
+  width: 70vw;
+  margin: auto;
+  text-align: right;
+}
+
+.MainLabel h3 {
+  text-transform: uppercase;
+}
+
+.call-action {
+  color: #8ecada;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.types-names {
+  color: #fff;
+  font-size: 30px;
+  margin-top: 0px;
+}
