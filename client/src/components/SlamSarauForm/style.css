@@ -1,0 +1,55 @@
+.SarauSlamForm {
+  padding: 0 5vw;
+}
+
+label {
+  font-size: 14px;
+  color: #7b7b7c;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.SarauSlamForm .success {
+  text-align: center;
+  font-size: 16px;
+  margin: auto;
+}
+
+.required {
+  color: #ff5151;
+}
+
+.section {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  color: #858585;
+}
+
+.section:before {
+  content: '// ';
+  color: #858585;
+}
+
+.agreement {
+  display: inline-block;
+  width: auto;
+  margin-top: 30px;
+}
+
+select,
+textarea,
+input {
+  margin-bottom: 20px;
+  display: block;
+  min-height: 25px;
+  width: 100%;
+  border: 1px solid #d0d1d3;
+}
+
+select {
+  width: auto;
+}
+
+textarea {
+  min-height: 80px;
+}

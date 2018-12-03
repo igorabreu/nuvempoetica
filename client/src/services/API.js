@@ -1,6 +1,6 @@
 const API = {
-  post: body => {
-    fetch('http://localhost:3000/', {
+  POST: body => {
+    return fetch('http://localhost:3000/', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -10,6 +10,21 @@ const API = {
     })
       .then(res => {
         return res
+      })
+      .catch(err => {
+        return err
+      })
+  },
+  GET: cep => {
+    return fetch(`https://viacep.com.br/ws/${cep}/json/`, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(res => {
+        return res.json()
       })
       .catch(err => {
         return err

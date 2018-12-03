@@ -8,10 +8,6 @@ body {
 
 .MainForm {
   background: url(../assets/images/background.jpg) repeat-y center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   height: 100%;
   width: 100%;
   font-family: 'Louis George';

@@ -1,15 +1,24 @@
-.SlamForm {
+.PoetaForm {
   padding: 0 5vw;
 }
 
 label {
   font-size: 14px;
   color: #7b7b7c;
-  margin-left: 10px;
   display: block;
 }
 
-.SarauForm .success {
+.agreement-input,
+.agreement {
+  display: inline-block;
+}
+
+.agreement-input {
+  margin-right: 5px;
+  width: 10px;
+}
+
+.PoetaForm .success {
   text-align: center;
   font-size: 16px;
   margin: auto;

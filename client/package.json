@@ -15,6 +15,7 @@
   "keywords": [
     "gatsby"
   ],
+  "proxy": "https://localhost:8000",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",

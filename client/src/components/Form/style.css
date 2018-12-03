@@ -8,25 +8,38 @@
   position: relative;
 }
 
+.entry-text {
+  color: #7b7b7c;
+  line-height: 30px;
+  padding: 60px 40px;
+}
+
 .types-bar {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 200px;
 }
 
 .types {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 100px;
   width: 30vw;
   min-width: 220px;
   max-width: 300px;
 }
 
-.types .type-logo {
+.types span {
   width: 95px;
   cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.types .selected {
+  color: #6f4a99;
+  text-decoration: underline;
 }
 
 .confirm-bar {

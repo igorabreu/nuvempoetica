@@ -17,5 +17,8 @@ module.exports = {
     },
     'gatsby-plugin-offline',
   ],
-  pathPrefix: '/client',
+  proxy: {
+    prefix: '/',
+    url: 'https://localhost:8000',
+  },
 }
