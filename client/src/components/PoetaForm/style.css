@@ -13,9 +13,17 @@ label {
   display: inline-block;
 }
 
+.agreement-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .agreement-input {
   margin-right: 5px;
-  width: 10px;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 4px;
 }
 
 .PoetaForm .success {

@@ -41,7 +41,7 @@ const SarauSlamForm = ({ handleEdition, invalidInputs, success, state }) => {
         onChange={handleEdition}
       />
       <label className="section">Endereço completo:</label>
-      <label className={invalidInputs.includes('address') ? 'required' : ''}>
+      <label className={invalidInputs.includes('cep') ? 'required' : ''}>
         CEP
       </label>
       <input
@@ -279,20 +279,22 @@ const SarauSlamForm = ({ handleEdition, invalidInputs, success, state }) => {
         <option value="indígena">Indígena</option>
         <option value="Outras">Outras</option>
       </select>
-      <input
-        className="agreement-input"
-        name="agreement"
-        type="checkbox"
-        onChange={handleEdition}
-      />
-      <label
-        className={`agreement ${
-          invalidInputs.includes('agreement') ? 'required' : ''
-        }`}
-      >
-        Concordo e autorizo o uso das informações para utilização na Nuvem
-        Poética
-      </label>
+      <div className="agreement-wrapper">
+        <input
+          className="agreement-input"
+          name="agreement"
+          type="checkbox"
+          onChange={handleEdition}
+        />
+        <label
+          className={`agreement ${
+            invalidInputs.includes('agreement') ? 'required' : ''
+          }`}
+        >
+          Concordo e autorizo o uso das informações para utilização na Nuvem
+          Poética
+        </label>
+      </div>
     </div>
   )
 }

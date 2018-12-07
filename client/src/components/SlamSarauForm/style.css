@@ -30,12 +30,6 @@ label {
   color: #858585;
 }
 
-.agreement {
-  display: inline-block;
-  width: auto;
-  margin-top: 30px;
-}
-
 select,
 textarea,
 input {

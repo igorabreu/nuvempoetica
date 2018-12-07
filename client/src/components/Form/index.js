@@ -9,9 +9,10 @@ class Form extends React.Component {
     super(props)
     this.state = {
       selected: 'poeta',
-      form: {},
+      formPoeta: {},
+      formSarau: {},
       invalidInputs: [],
-      requiredInputs: ['name', 'description', 'address', 'location'],
+      requiredInputs: ['completeName', 'description'],
     }
   }
 
@@ -20,18 +21,17 @@ class Form extends React.Component {
       selected,
       success: false,
       invalidInputs: [],
-      form: {},
+      formPoeta: {},
+      formSarau: {},
     })
   }
 
   handleEdition = (e, type) => {
-    const { form } = this.state
-
     if (e.target.name === 'cep' && e.target.value.length > 7) {
       API.GET(e.target.value).then(res => {
         this.setState({
-          form: {
-            ...form,
+          [type]: {
+            ...this.state[type],
             street: res.logradouro,
             neighborhood: res.bairro,
             city: res.localidade,
@@ -41,20 +41,20 @@ class Form extends React.Component {
       })
     }
     this.setState({
-      form: {
-        ...form,
+      [type]: {
+        ...this.state[type],
         [e.target.name]: e.target.value,
-        formType: type,
       },
     })
-    console.log(this.state.form)
   }
 
   handleSubmit() {
-    const { form, requiredInputs } = this.state
+    const { formPoeta, formSarau, requiredInputs, selected } = this.state
     let invalidInputs = []
+    let currentForm = selected === 'poeta' ? formPoeta : formSarau
     requiredInputs.map(reqField => {
-      if (!form[reqField] || '') {
+      if (!currentForm[reqField]) {
+        console.log(reqField)
         return invalidInputs.push(reqField)
       } else {
         return null
@@ -65,8 +65,8 @@ class Form extends React.Component {
         invalidInputs,
       })
     } else {
-      console.log(form)
-      API.POST(form)
+      console.log(currentForm)
+      API.POST(currentForm)
       /*
       this.setState({
         success: true,
@@ -115,18 +115,18 @@ class Form extends React.Component {
         <div />
         {selected === 'poeta' ? (
           <PoetaForm
-            handleEdition={e => this.handleEdition(e, 'poeta')}
+            handleEdition={e => this.handleEdition(e, 'formPoeta')}
             invalidInputs={invalidInputs}
             success={success}
-            state={this.state.form}
+            state={this.state.formPoeta}
           />
         ) : null}
         {selected === 'slam' ? (
           <SlamSarauForm
-            handleEdition={e => this.handleEdition(e, 'sarauSlam')}
+            handleEdition={e => this.handleEdition(e, 'formSarau')}
             invalidInputs={invalidInputs}
             success={success}
-            state={this.state.form}
+            state={this.state.formSarau}
           />
         ) : null}
         <div className="messages">
