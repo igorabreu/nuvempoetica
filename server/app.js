@@ -2,8 +2,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const server = require("http").Server(app);
-const port = 3000;
+const port = 21075;
 const helmet = require("helmet");
+const { writeInTable } = require("./sheets.js");
 
 app.use(helmet());
 app.use(bodyParser.json());
@@ -42,7 +43,7 @@ app.get("/", (err, res) => {
 
 app.post("/", (req, res) => {
   res.status(200);
-  console.log(req.body);
+  writeInTable(req.body.formType, req.body);
   res.send(res.body);
   res.end();
 });

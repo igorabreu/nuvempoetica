@@ -116,7 +116,7 @@ const SarauSlamForm = ({ handleEdition, invalidInputs, success, state }) => {
         <option value="outros">Outros</option>
       </select>
       <label className={invalidInputs.includes('frequency') ? 'required' : ''}>
-        Quanto acontece? (Em que periodicidade)
+        Quando acontece? (Em que periodicidade)
       </label>
       <input
         name="frequency"
@@ -252,32 +252,30 @@ const SarauSlamForm = ({ handleEdition, invalidInputs, success, state }) => {
         <option value="Outras">Outras</option>
       </select>
       <label
-        className={
-          invalidInputs.includes('sexual-orietation') ? 'required' : ''
-        }
+        className={invalidInputs.includes('sexualOrietation') ? 'required' : ''}
       >
         Orientação sexual
       </label>
-      <select name="sexual-orietation" onChange={handleEdition}>
-        <option value="Não informar">Não informar</option>
-        <option valeu="Heterosexual">Heterosexual</option>
-        <option value="Lésbica">Lésbica</option>
-        <option value="Gay">Gay</option>
-        <option value="Bissexual">Bissexual</option>
-        <option value="Assexual">Assexual</option>
-        <option value="Outras">Outras</option>
+      <select name="sexualOrietation" onChange={handleEdition}>
+        <option value="não informar">Não informar</option>
+        <option valeu="heterosexual">Heterosexual</option>
+        <option value="lésbica">Lésbica</option>
+        <option value="gay">Gay</option>
+        <option value="bissexual">Bissexual</option>
+        <option value="assexual">Assexual</option>
+        <option value="outras">Outras</option>
       </select>
       <label className={invalidInputs.includes('race') ? 'required' : ''}>
         Raça
       </label>
       <select name="race" onChange={handleEdition}>
-        <option value="Não informar">Não informar</option>
-        <option valeu="Branca">Branca</option>
-        <option value="Preta">Preta</option>
-        <option value="Amarela">Amarela</option>
-        <option value="Parda">Parda</option>
+        <option value="não informar">Não informar</option>
+        <option valeu="branca">Branca</option>
+        <option value="preta">Preta</option>
+        <option value="amarela">Amarela</option>
+        <option value="parda">Parda</option>
         <option value="indígena">Indígena</option>
-        <option value="Outras">Outras</option>
+        <option value="outras">Outras</option>
       </select>
       <div className="agreement-wrapper">
         <input

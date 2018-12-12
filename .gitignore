@@ -7,3 +7,5 @@ client/yarn-error.log
 # Build directory
 client/public
 .DS_Store
+server/credentials.json
+server/token.json

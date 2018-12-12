@@ -248,13 +248,14 @@ const PoetaForm = ({ handleEdition, invalidInputs, success, state }) => {
         Costuma participar de algum evento literário?
       </label>
       <select name="event" onChange={handleEdition}>
+        <option value="" />
         <option value="Sim">Sim</option>
         <option valeu="Não">Não</option>
       </select>
-      <label className={invalidInputs.includes('event') ? 'required' : ''}>
+      <label className={invalidInputs.includes('eventType') ? 'required' : ''}>
         Se sim, qual?
       </label>
-      <select name="event" onChange={handleEdition}>
+      <select name="eventType" onChange={handleEdition}>
         <option value="" />
         <option value="Sarau">Sarau</option>
         <option valeu="Slam">Slam</option>

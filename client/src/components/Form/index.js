@@ -9,10 +9,67 @@ class Form extends React.Component {
     super(props)
     this.state = {
       selected: 'poeta',
-      formPoeta: {},
-      formSarau: {},
+      formPoeta: {
+        formType: 'Poeta',
+        completeName: '',
+        artisticName: '',
+        description: '',
+        cellphone: '',
+        socialnetwork: '',
+        photo: '',
+        video: '',
+        yourEmail: '',
+        birth: '',
+        cep: '',
+        street: '',
+        number: '',
+        complement: '',
+        city: '',
+        state: '',
+        publication: 'sim',
+        typePublication: '',
+        instruction: 'não informar',
+        gender: 'não informar',
+        sexualOrietation: 'não informar',
+        race: 'não informar',
+        event: '',
+        eventType: '',
+        agreement: '',
+      },
+      formSarau: {
+        formType: 'SarauSlam',
+        type: 'sarau',
+        name: '',
+        description: '',
+        cep: '',
+        street: '',
+        number: '',
+        complement: '',
+        city: '',
+        state: '',
+        itinerant: 'sim',
+        where: 'bar',
+        frequency: '',
+        foundation: '',
+        sponsorship: 'sim',
+        announcement: '',
+        email: '',
+        cellphone: '',
+        socialnetwork: '',
+        photo: '',
+        video: '',
+        yourName: '',
+        yourEmail: '',
+        birth: '',
+        role: '',
+        gender: 'não informar',
+        sexualOrietation: 'não informar',
+        race: 'não informar',
+        agreement: 'não',
+      },
       invalidInputs: [],
-      requiredInputs: ['completeName', 'description'],
+      requiredInputsPoeta: ['description'],
+      requiredInputsSarau: ['description'],
     }
   }
 
@@ -21,8 +78,64 @@ class Form extends React.Component {
       selected,
       success: false,
       invalidInputs: [],
-      formPoeta: {},
-      formSarau: {},
+      formPoeta: {
+        formType: 'Poeta',
+        completeName: '',
+        artisticName: '',
+        description: '',
+        cellphone: '',
+        socialnetwork: '',
+        photo: '',
+        video: '',
+        yourEmail: '',
+        birth: '',
+        cep: '',
+        street: '',
+        number: '',
+        complement: '',
+        city: '',
+        state: '',
+        publication: 'sim',
+        typePublication: '',
+        instruction: 'não informar',
+        gender: 'não informar',
+        sexualOrietation: 'não informar',
+        race: 'não informar',
+        event: '',
+        eventType: '',
+        agreement: '',
+      },
+      formSarau: {
+        formType: 'SarauSlam',
+        type: 'sarau',
+        name: '',
+        description: '',
+        cep: '',
+        street: '',
+        number: '',
+        complement: '',
+        city: '',
+        state: '',
+        itinerant: 'sim',
+        where: 'bar',
+        frequency: '',
+        foundation: '',
+        sponsorship: 'sim',
+        announcement: '',
+        email: '',
+        cellphone: '',
+        socialnetwork: '',
+        photo: '',
+        video: '',
+        yourName: '',
+        yourEmail: '',
+        birth: '',
+        role: '',
+        gender: 'não informar',
+        sexualOrietation: 'não informar',
+        race: 'não informar',
+        agreement: 'não',
+      },
     })
   }
 
@@ -49,9 +162,17 @@ class Form extends React.Component {
   }
 
   handleSubmit() {
-    const { formPoeta, formSarau, requiredInputs, selected } = this.state
+    const {
+      formPoeta,
+      formSarau,
+      requiredInputsPoeta,
+      requiredInputsSarau,
+      selected,
+    } = this.state
     let invalidInputs = []
     let currentForm = selected === 'poeta' ? formPoeta : formSarau
+    let requiredInputs =
+      selected === 'poeta' ? requiredInputsPoeta : requiredInputsSarau
     requiredInputs.map(reqField => {
       if (!currentForm[reqField]) {
         console.log(reqField)
@@ -67,14 +188,11 @@ class Form extends React.Component {
     } else {
       console.log(currentForm)
       API.POST(currentForm)
-      /*
       this.setState({
         success: true,
-      })*/
+      })
     }
   }
-
-  componentDidMount() {}
 
   render() {
     const { selected, invalidInputs, success } = this.state
