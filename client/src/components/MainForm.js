@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import Form from './Form'
 import Header from './Header'
 import MainLabel from './MainLabel'
+import Footer from './Footer'
 import './MainForm.css'
 
 const MainForm = () => (
@@ -20,6 +21,7 @@ const MainForm = () => (
       <Header />
       <MainLabel />
       <Form />
+      <Footer />
     </div>
   </div>
 )

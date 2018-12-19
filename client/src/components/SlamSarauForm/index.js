@@ -113,6 +113,7 @@ const SarauSlamForm = ({ handleEdition, invalidInputs, success, state }) => {
         <option value="ponto de leitura">Ponto de Leitura</option>
         <option value="centro cultural">Centro Cultural</option>
         <option value="escola">Escola</option>
+        <option value="espaco publico">Espaço Público</option>
         <option value="outros">Outros</option>
       </select>
       <label className={invalidInputs.includes('frequency') ? 'required' : ''}>

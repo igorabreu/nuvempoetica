@@ -68,8 +68,6 @@ class Form extends React.Component {
         agreement: 'não',
       },
       invalidInputs: [],
-      requiredInputsPoeta: ['description'],
-      requiredInputsSarau: ['description'],
     }
   }
 
@@ -162,32 +160,27 @@ class Form extends React.Component {
   }
 
   handleSubmit() {
-    const {
-      formPoeta,
-      formSarau,
-      requiredInputsPoeta,
-      requiredInputsSarau,
-      selected,
-    } = this.state
-    let invalidInputs = []
+    const { formPoeta, formSarau, selected } = this.state
+    let newInvalidInputs = []
+    this.setState({
+      invalidInputs: newInvalidInputs,
+    })
     let currentForm = selected === 'poeta' ? formPoeta : formSarau
-    let requiredInputs =
-      selected === 'poeta' ? requiredInputsPoeta : requiredInputsSarau
-    requiredInputs.map(reqField => {
-      if (!currentForm[reqField]) {
-        console.log(reqField)
-        return invalidInputs.push(reqField)
+    Object.keys(currentForm).map(reqField => {
+      console.log(currentForm[reqField])
+      if (currentForm[reqField] === '') {
+        return newInvalidInputs.push(reqField)
       } else {
         return null
       }
     })
-    if (invalidInputs.length > 0) {
+    if (newInvalidInputs.length > 0) {
       this.setState({
-        invalidInputs,
+        invalidInputs: newInvalidInputs,
       })
     } else {
-      console.log(currentForm)
       API.POST(currentForm)
+      console.log(currentForm)
       this.setState({
         success: true,
       })
@@ -248,13 +241,6 @@ class Form extends React.Component {
           />
         ) : null}
         <div className="messages">
-          {!success ? (
-            <div>
-              <span style={{ color: '#ff5151' }}>(*)</span> campos obrigatórios
-            </div>
-          ) : (
-            <div />
-          )}
           {invalidInputs.length > 0 ? (
             <div>Confira os campos em vermelho que estão pendentes.</div>
           ) : (
