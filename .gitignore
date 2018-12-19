@@ -9,3 +9,4 @@ client/public
 .DS_Store
 server/credentials.json
 server/token.json
+client/package-lock.json

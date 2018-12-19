@@ -23,6 +23,16 @@ const Footer = () => (
         </div>
       </a>
       <a
+        href="http://pensegrande.org.br/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div className="wrapper">
+          <div className="label">{''}</div>
+          <img className="penseGrande" src={penseGrande} alt="Pense Grande" />
+        </div>
+      </a>
+      <a
         href="https://aliancaempreendedora.org.br/"
         target="_blank"
         rel="noopener noreferrer"
@@ -30,16 +40,6 @@ const Footer = () => (
         <div className="wrapper">
           <div className="label">Organização Parceira:</div>
           <img className="alianca" src={alianca} alt="Aliança Empreendedora" />
-        </div>
-      </a>
-      <a
-        href="http://fundacaotelefonica.org.br/projetos/pense-grande/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div className="wrapper">
-          <div className="label">Apoio:</div>
-          <img className="penseGrande" src={penseGrande} alt="Pense Grande" />
         </div>
       </a>
       <a
