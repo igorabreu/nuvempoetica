@@ -1,7 +1,7 @@
 import React from 'react'
 
-import MainForm from '../components/MainForm'
+import Home from '../components/Home'
 
-const IndexPage = () => <MainForm />
+const IndexPage = () => <Home />
 
 export default IndexPage

@@ -6,7 +6,7 @@ const SarauSlamForm = ({ handleEdition, invalidInputs, success, state }) => {
     return (
       <div className="SarauSlamForm">
         <label className="success">
-          Seu cadastro foi feito com sucesso! Muito obrigado! :)
+          Seu cadastro foi feito com sucesso! Muito obrigada! :)
         </label>
       </div>
     )

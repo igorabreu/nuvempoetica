@@ -6,7 +6,7 @@ const PoetaForm = ({ handleEdition, invalidInputs, success, state }) => {
     return (
       <div className="PoetaForm">
         <label className="success">
-          Seu cadastro foi feito com sucesso! Muito obrigado! :)
+          Seu cadastro foi feito com sucesso! Muito obrigada! :)
         </label>
       </div>
     )
@@ -164,6 +164,7 @@ const PoetaForm = ({ handleEdition, invalidInputs, success, state }) => {
         Já participou de alguma publicação?
       </label>
       <select name="publication" onChange={handleEdition}>
+        <option value="" />
         <option value="sim">Sim</option>
         <option valeu="não">Não</option>
       </select>
@@ -173,7 +174,7 @@ const PoetaForm = ({ handleEdition, invalidInputs, success, state }) => {
         Se já participou, selecione o tipo
       </label>
       <select name="typePublication" onChange={handleEdition}>
-        <option value="" />
+        <option value="Nao">Não participei</option>
         <option value="Independente">Independente</option>
         <option valeu="Independente com Editora">
           Independente com Editora
@@ -217,13 +218,11 @@ const PoetaForm = ({ handleEdition, invalidInputs, success, state }) => {
         <option value="Outras">Outras</option>
       </select>
       <label
-        className={
-          invalidInputs.includes('sexual-orietation') ? 'required' : ''
-        }
+        className={invalidInputs.includes('sexualOrietation') ? 'required' : ''}
       >
         Orientação sexual
       </label>
-      <select name="sexual-orietation" onChange={handleEdition}>
+      <select name="sexualOrietation" onChange={handleEdition}>
         <option value="Não informar">Não informar</option>
         <option valeu="Heterosexual">Heterosexual</option>
         <option value="Lésbica">Lésbica</option>
@@ -256,7 +255,7 @@ const PoetaForm = ({ handleEdition, invalidInputs, success, state }) => {
         Se sim, qual?
       </label>
       <select name="eventType" onChange={handleEdition}>
-        <option value="" />
+        <option value="Nao">Não participo</option>
         <option value="Sarau">Sarau</option>
         <option valeu="Slam">Slam</option>
         <option valeu="Roda de rima">Roda de rima</option>

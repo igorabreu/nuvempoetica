@@ -1,0 +1,11 @@
+.HeaderHome {
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 190px;
+  margin-bottom: 15px;
+}

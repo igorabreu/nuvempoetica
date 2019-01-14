@@ -1,18 +1,18 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Form from './Form'
-import Header from './Header'
-import MainLabel from './MainLabel'
-import Footer from './Footer'
-import './MainForm.css'
+import Form from '../Form'
+import Header from '../Header'
+import MainLabel from '../MainLabel'
+import Footer from '../Footer'
+import './style.css'
 
 const MainForm = () => (
   <div>
     <Helmet
       title="Nuvem Poética"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Nuvem Poética' },
+        { name: 'keywords', content: 'poesia, slams' },
       ]}
     >
       <html lang="pt-br" />

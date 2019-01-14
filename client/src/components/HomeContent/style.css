@@ -1,0 +1,101 @@
+.HomeContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.wrapper-content {
+  width: 65vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px 5vw;
+}
+
+.wrapper-content .link-wrapper {
+  width: 100%;
+  margin-bottom: 50px;
+  height: 300px;
+  padding-bottom: 40px;
+  cursor: pointer;
+}
+
+.wrapper-content h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+.wrapper-content .card {
+  border: 1px solid #000;
+  height: 300px;
+}
+
+.wrapper-content .card:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.wrapper-content .card:hover:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.wrapper-content .link-wrapper.map {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.wrapper-content .link-wrapper.map .card {
+  width: 100%;
+  background: url(../../assets/images/mapeamento-bg.png) repeat-y center center;
+  background-size: cover;
+  position: relative;
+}
+
+.wrapper-content .link-wrapper.poems .card {
+  background: url(../../assets/images/poems-bg.png) repeat-y center center;
+  background-size: cover;
+  position: relative;
+}
+
+.wrapper-content .link-wrapper.singup .card {
+  background: url(../../assets/images/singup-bg.png) repeat-y;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .wrapper-content h3 {
+    text-align: left;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 960px) {
+  .wrapper-content .link-wrapper {
+    width: 45%;
+  }
+  .wrapper-content h3 {
+    text-align: left;
+  }
+}

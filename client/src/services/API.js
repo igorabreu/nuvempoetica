@@ -1,6 +1,6 @@
 const API = {
   POST: body => {
-    return fetch('http://localhost:21075/', {
+    return fetch('http://nuvempoetica.com:21075', {
       method: 'POST',
       headers: {
         Accept: 'application/json',

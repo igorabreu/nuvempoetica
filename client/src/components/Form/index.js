@@ -27,13 +27,13 @@ class Form extends React.Component {
         city: '',
         state: '',
         publication: 'sim',
-        typePublication: '',
+        typePublication: 'não participei',
         instruction: 'não informar',
         gender: 'não informar',
         sexualOrietation: 'não informar',
         race: 'não informar',
         event: '',
-        eventType: '',
+        eventType: 'não participo',
         agreement: '',
       },
       formSarau: {
@@ -93,14 +93,14 @@ class Form extends React.Component {
         complement: '',
         city: '',
         state: '',
-        publication: 'sim',
-        typePublication: '',
+        publication: '',
+        typePublication: 'não participei',
         instruction: 'não informar',
         gender: 'não informar',
         sexualOrietation: 'não informar',
         race: 'não informar',
         event: '',
-        eventType: '',
+        eventType: 'não participo',
         agreement: '',
       },
       formSarau: {
@@ -144,7 +144,6 @@ class Form extends React.Component {
           [type]: {
             ...this.state[type],
             street: res.logradouro,
-            neighborhood: res.bairro,
             city: res.localidade,
             state: res.uf,
           },
@@ -157,6 +156,7 @@ class Form extends React.Component {
         [e.target.name]: e.target.value,
       },
     })
+    console.log(this.state)
   }
 
   handleSubmit() {
@@ -167,8 +167,11 @@ class Form extends React.Component {
     })
     let currentForm = selected === 'poeta' ? formPoeta : formSarau
     Object.keys(currentForm).map(reqField => {
-      console.log(currentForm[reqField])
-      if (currentForm[reqField] === '') {
+      if (
+        currentForm[reqField] === '' &&
+        (reqField !== 'video' && reqField !== 'photo')
+      ) {
+        console.log(currentForm[reqField])
         return newInvalidInputs.push(reqField)
       } else {
         return null
