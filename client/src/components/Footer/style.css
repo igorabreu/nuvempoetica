@@ -9,8 +9,8 @@
 
 .Footer .footer-content {
   display: inline-flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   margin: 0 auto;
   width: 70vw;
 }
@@ -42,43 +42,11 @@
   max-width: 80px;
 }
 
-.wrapper .telefonica {
-  max-width: 270px;
-}
-
 .wrapper .peneira {
-  max-width: 130px;
+  max-width: 150px;
 }
 
 @media (min-width: 980px) {
-  .Footer {
-    background: #734e96;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    height: 150px;
-    padding: 40px 20px;
-  }
-
-  .Footer .penseGrande {
-    transform: translate(-15px, 30px);
-  }
-
-  .Footer .peneira {
-    transform: translateY(10px);
-  }
-
-  .Footer .footer-content {
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 70vw;
-    height: 110px;
-    align-items: flex-start;
-    max-width: 800px;
-  }
-
   .Footer .label {
     color: #fff;
     font-weight: bolder;

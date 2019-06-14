@@ -13,15 +13,6 @@ const HomeContent = () => (
         <h3>Mapeamento de Saraus, Slams e Poetas</h3>
         <div className="card" />
       </Link>
-
-      <Link
-        className="link-wrapper poems"
-        to="/365-poemas"
-        style={{ textDecoration: 'none', color: '#000' }}
-      >
-        <h3>1 poema por dia, 365 por ano</h3>
-        <div className="card" />
-      </Link>
       <Link
         className="link-wrapper singup"
         to="/cadastro"

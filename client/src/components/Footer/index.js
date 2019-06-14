@@ -9,40 +9,6 @@ const Footer = () => (
   <div className="Footer">
     <div className="footer-content">
       <a
-        href="http://fundacaotelefonica.org.br/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div className="wrapper">
-          <div className="label">Apoio:</div>
-          <img
-            className="telefonica"
-            src={telefonica}
-            alt="Fundação Telefônica"
-          />
-        </div>
-      </a>
-      <a
-        href="http://pensegrande.org.br/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div className="wrapper">
-          <div className="label">{''}</div>
-          <img className="penseGrande" src={penseGrande} alt="Pense Grande" />
-        </div>
-      </a>
-      <a
-        href="https://aliancaempreendedora.org.br/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div className="wrapper">
-          <div className="label">Organização Parceira:</div>
-          <img className="alianca" src={alianca} alt="Aliança Empreendedora" />
-        </div>
-      </a>
-      <a
         href="http://www.peneira.org/"
         target="_blank"
         rel="noopener noreferrer"

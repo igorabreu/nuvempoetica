@@ -15,12 +15,6 @@ const MenuBar = ({ selected }) => (
         <li>Mapeamento</li>
       </Link>
       <Link
-        to="/365-poemas"
-        className={selected === 'poems' ? 'selected' : 'default'}
-      >
-        <li>365 poesias</li>
-      </Link>
-      <Link
         to="/cadastro"
         className={selected === 'signup' ? 'selected' : 'default'}
       >
